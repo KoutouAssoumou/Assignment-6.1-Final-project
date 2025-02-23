@@ -1,0 +1,10 @@
+C:\Users\uthma\source\repos\Koutou\Koutou\bin\Debug\Koutou.exe.config
+C:\Users\uthma\source\repos\Koutou\Koutou\bin\Debug\Koutou.exe
+C:\Users\uthma\source\repos\Koutou\Koutou\bin\Debug\Koutou.pdb
+C:\Users\uthma\source\repos\Koutou\Koutou\obj\Debug\Koutou.csproj.AssemblyReference.cache
+C:\Users\uthma\source\repos\Koutou\Koutou\obj\Debug\Koutou.Form1.resources
+C:\Users\uthma\source\repos\Koutou\Koutou\obj\Debug\Koutou.Properties.Resources.resources
+C:\Users\uthma\source\repos\Koutou\Koutou\obj\Debug\Koutou.csproj.GenerateResource.cache
+C:\Users\uthma\source\repos\Koutou\Koutou\obj\Debug\Koutou.csproj.CoreCompileInputs.cache
+C:\Users\uthma\source\repos\Koutou\Koutou\obj\Debug\Koutou.exe
+C:\Users\uthma\source\repos\Koutou\Koutou\obj\Debug\Koutou.pdb
