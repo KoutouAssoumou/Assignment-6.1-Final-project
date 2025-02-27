@@ -15,21 +15,54 @@ namespace Koutou
     public partial class Form1 : Form
     {
         // Class Person with Name et Old
-        public class Person
+        public abstract class Person
         {
-            public string Name { get; set; }
-            public int Old { get; set; }
+            private string _name;
+            private int _old;
+
+            public string Name => _name;
+            public int Old => _old;
+
+            protected Person(string name, int old)
+            {
+                _name = name;
+                _old = old;
+            }
+
+            public abstract string GetDescription();
         }
         // Classe Student herite Person and add Subject
         public class Student : Person
         {
-            public string Subject { get; set; }
+            private string _subject;
+            public string Subject => _subject;
+
+            public Student(string name, int old, string subject) : base(name, old)
+            {
+                _subject = subject;
+            }
+
+            public override string GetDescription()
+            {
+                return $"Name: {Name}\nOld: {Old}\nSubject: {Subject}";
+            }
         }
 
         // Classe Student herite Person and add Subject
         public class Teacher : Person
         {
-            public string Classroom { get; set; }
+            private string _classroom;
+            public string Classroom => _classroom;
+
+            public Teacher(string name, int old, string classroom) : base(name, old)
+            {
+                _classroom = classroom;
+            }
+
+            public override string GetDescription()
+            {
+                return $"Name: {Name}\nOld: {Old}\nClassroom: {Classroom}";
+            }
         }
 
         public Form1()
@@ -44,87 +77,34 @@ namespace Koutou
 
         private void buttonaddstudent_Click(object sender, EventArgs e)
         {
-            string errors = "";
-            string name = textBoxNameStudent.Text.Trim();
-            string oldText = textBoxOldStudent.Text.Trim();
-            string subject = comboBoxSubjectStudent.SelectedItem?.ToString();
-
-            if (string.IsNullOrWhiteSpace(name) || !Regex.IsMatch(name, "[a-zA-Z]"))
-            {
-                errors += "- Name must be a text value (only letters and spaces allowed).\n";
-            }
-
-            if (!int.TryParse(oldText, out int age))
-            {
-                errors += "- Old must be a numeric value.\n";
-            }
-
-            if (string.IsNullOrWhiteSpace(subject))
-            {
-                errors += "- Please select a Subject.\n";
-            }
-
-            if (!string.IsNullOrEmpty(errors))
-            {
-                MessageBox.Show(errors, "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // create  Student
-            Student student = new Student()
-            {
-                Name = name,
-                Old = age,
-                Subject = subject
-            };
-
-            // message
-            MessageBox.Show("Name Student : " + student.Name + "\nOld Student : " + student.Old + "\nSubject : " + student.Subject, "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void buttonaddteacher_Click(object sender, EventArgs e)
         {
-            string errors = "";
-            string name = textBoxNameTeacher.Text.Trim();
-            string oldText = textBoxOldTeacher.Text.Trim();
-            string classroom = comboBoxClassRoom.SelectedItem?.ToString();
-
-            if (string.IsNullOrWhiteSpace(name) || !Regex.IsMatch(name, "[a-zA-Z]"))
-            {
-                errors += "- Name must be a text value (only letters and spaces allowed).\n";
-            }
-
-            if (!int.TryParse(oldText, out int age))
-            {
-                errors += "- Old must be a numeric value.\n";
-            }
-
-            if (string.IsNullOrWhiteSpace(classroom))
-            {
-                errors += "- Please select a Subject.\n";
-            }
-
-            if (!string.IsNullOrEmpty(errors))
-            {
-                MessageBox.Show(errors, "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Create Teacher
-            Teacher teacher = new Teacher()
-            {
-                Name = name,
-                Old = age,
-                Classroom = classroom
-            };
-
-            // Message
-            MessageBox.Show("Name Student : " + teacher.Name + "\nOld Student : " + teacher.Old + "\nClassRoom : " + teacher.Classroom, "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //open windows Form2
+            Form2 f2 = new Form2();
+            f2.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            //open windows Form3
+            Form3 f3 = new Form3();
+            f3.Show();
         }
     }
 }

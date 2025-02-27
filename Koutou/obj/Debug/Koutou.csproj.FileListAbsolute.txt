@@ -8,3 +8,5 @@ C:\Users\uthma\source\repos\Koutou\Koutou\obj\Debug\Koutou.csproj.GenerateResour
 C:\Users\uthma\source\repos\Koutou\Koutou\obj\Debug\Koutou.csproj.CoreCompileInputs.cache
 C:\Users\uthma\source\repos\Koutou\Koutou\obj\Debug\Koutou.exe
 C:\Users\uthma\source\repos\Koutou\Koutou\obj\Debug\Koutou.pdb
+C:\Users\uthma\source\repos\Koutou\Koutou\obj\Debug\Koutou.Form2.resources
+C:\Users\uthma\source\repos\Koutou\Koutou\obj\Debug\Koutou.Form3.resources
